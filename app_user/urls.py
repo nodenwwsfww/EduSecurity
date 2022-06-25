@@ -1,6 +1,6 @@
 from django.urls import path
 from .views import AnotherLogin, AnotherLogout, register_view, ProfileDetailView, ProfileEditFromView, ProfilesListView, \
-    RelativeFormView, StudentFormView, StudentEditFormView, RelativeEditFormView
+    RelativeFormView, StudentFormView, StudentEditFormView, RelativeEditFormView, SchoolList
 
 urlpatterns = [
     path('login/', AnotherLogin.as_view(), name='login'),
@@ -13,4 +13,5 @@ urlpatterns = [
     path('student/create', StudentFormView.as_view(), name='create_student'),
     path('student/<int:student_id>/edit', StudentEditFormView.as_view(), name='edit_student'),
     path('relative/<int:relative_id>/edit', RelativeEditFormView.as_view(), name='edit_student'),
+    path('api/v1/photo/', SchoolList.as_view(), name='school-list'),
 ]
