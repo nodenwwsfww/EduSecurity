@@ -41,3 +41,24 @@ body{
 .btn-purple:hover{
 	color: white;
 }
+
+@media screen and (max-width: 1000px){
+	.data_container{
+		height: 420px;
+	}
+	.photo{
+		width: 140px;
+	}
+	.data{
+		text-align: center;
+	}
+}
+
+@media screen and (max-width: 500px){
+	.data{
+		font-size: 16px;
+	}
+	.photo{
+		width: 120px;
+	}
+}
