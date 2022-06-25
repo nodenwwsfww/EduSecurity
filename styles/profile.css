@@ -1,0 +1,46 @@
+.pageName{
+	background: #F69400;
+	padding: 10px;
+	border-radius: 45px;
+	text-align: center;
+	margin-top: 30px;
+	color: white;
+}
+
+.photo{
+	font-size: 300px;
+	padding-left: 170px;
+}
+
+.data_container{
+	height: 200px;
+}
+
+.data{
+	padding: 80px 100px 100px 70px;
+	font-size: 20px;
+	vertical-align: middle;
+}
+
+.btn-purple{
+	background: #553570;
+	color: white;
+	position: relative;
+	left: 50px;
+	margin-left: 10px;
+}
+
+.btn-purple:hover{
+	color: white;
+}
+
+.btn{
+	margin-top: 100px;
+	text-align: center;
+	border-radius: 45px;
+}
+
+.btn-secondary{
+	position: relative;
+	left:  245px;
+}
