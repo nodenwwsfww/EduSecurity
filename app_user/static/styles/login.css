@@ -1,11 +1,7 @@
 body{
-	overflow-x: hidden;
 	padding: 10px;
 	background: #553570;
 	padding: 20px;
-	overflow-x: hidden;
-	overflow-y: hidden;
-	font-family: 'Montserrat', sans-serif;
 }
 
 a{
@@ -20,7 +16,7 @@ a:hover {
 
 .form{
 	padding: 40px 20px 20px 20px;
-	margin: 190px auto;
+	margin: 140px auto;
 	background: #F69400;
 	color: #fff;
 	border-radius: 45px;
@@ -68,6 +64,13 @@ h2{
 	width: 326px;
 	border-radius: 45px 45px 0px 0px;
 	padding: 20px 0 20px 0;
+}
+
+h1{
+	color: #F69400;
+	position: relative;
+	top: 50px;
+	text-align: center;
 }
 
 .reg{
