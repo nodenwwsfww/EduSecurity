@@ -18,18 +18,16 @@
 <body>
     <section>
         <form method="post">
-                {% csrf_token %}
-                {{ form.as_p }}
             <div class="container">
                 <h2>Вход</h2>
                 <div class="form">
                     <div class="mb-3 name">
                         <label class="form-label">Имя:</label>
-                        <input type="text" class="form-control" id="login" placeholder="Введите имя" required>
+                        <input type="text" name="username" autofocus="" autocapitalize="none" autocomplete="username" maxlength="150" required="" id="id_username" class="form-control" placeholder="Введите имя" required>
                     </div>
                     <div class="mb-3">
                         <label class="form-label">Пароль:</label>
-                        <input type="password" class="form-control" id="password" placeholder="Введите пароль" required>
+                        <input type="password" name="password" autocomplete="current-password" required="" id="id_password" class="form-control" placeholder="Введите пароль">
                     </div>
                     <div class="button">
                         <button type="submit" class="btn btn-dark login" id="btn">Войти</button>
