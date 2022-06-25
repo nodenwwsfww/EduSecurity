@@ -4,12 +4,16 @@ from django.contrib.auth.models import User
 from django.contrib.auth.views import LogoutView, LoginView
 from django.shortcuts import render, redirect
 from django.views import generic, View
+from rest_framework.generics import GenericAPIView
+from rest_framework.mixins import ListModelMixin, CreateModelMixin
 
 from .forms import RelativeForm, StudentForm
 from .models import School, Relative, Student
+from .serializers import SchoolSerializer
 
 
 def register_view(request):
+    """Регистрация и авторизация"""
     if request.method == 'POST':
         form = UserCreationForm(request.POST)
         if form.is_valid():
@@ -172,3 +176,24 @@ class StudentFormView(View):
             return render(request, 'create_student.html', context={'student_form': student_form})
         else:
             raise PermissionError
+
+
+class SchoolList(ListModelMixin, CreateModelMixin, GenericAPIView):
+    """Представление для получения списка фотографий и загрузки новой"""
+    serializer_class = SchoolSerializer
+
+    def get_queryset(self):
+        user = self.request.user
+        queryset = School.objects.filter(user=user)
+        school = self.request.query_params.get('school')
+        if school:
+            queryset.filter(name=school)
+        return queryset
+
+    def get(self, request):
+        """Определение метода GET"""
+        return self.list(request)
+
+    def post(self, request):
+        """Определение метода POST"""
+        return self.create(request)

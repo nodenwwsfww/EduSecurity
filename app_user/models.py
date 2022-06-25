@@ -42,6 +42,9 @@ class Student(models.Model):
     patronymic = models.CharField(max_length=25, verbose_name='Отчество')
     phone_number = models.CharField(max_length=11, verbose_name='Номер телефона')
 
+    def __str__(self):
+        return self.first_name + ' ' + self.last_name
+
     class Meta:
         verbose_name_plural = 'ученики'
         verbose_name = 'ученик'
