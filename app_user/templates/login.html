@@ -41,8 +41,9 @@
                     </div>
                 </div>
 
-                <img src="../../img/login1.png" alt="" class="login_img1">
-                <img src="../../img/login2.png" alt="" class="login_img2">
+                <link rel = "stylesheet" type = "text/css" href="{% static 'styles/login.css' %}"/>
+                <img src="{% static 'styles/login1.png' %}" alt="" class="login_img1">
+                <img src="{% static 'styles/login2.png' %}" alt="" class="login_img2">
 
                 <div class="container-fluid"></div>
             </div>
@@ -51,6 +52,6 @@
     <script src="https://code.jquery.com/jquery-latest.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-    <script type="text/javascript" src="../../scripts/login.js"></script>
+    <script type="text/javascript" src="{% static 'scripts/login.js' %}"></script>
 </body>
 </html>
