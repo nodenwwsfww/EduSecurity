@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Создание доверенного лица</title>
+</head>
+<body>
+    <form method="post">
+        {% csrf_token %}
+        {{ relative_form.as_p }}
+        <button type="submit">Сохранить</button>
+    </form>
+</body>
+</html>

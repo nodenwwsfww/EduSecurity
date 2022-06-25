@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Список родителей</title>
+</head>
+<body>
+    <ul>
+        {% for profile in profiles %}
+            <li><a href="../profile/{{ profile.id }}">{{ profile.last_name }} {{ profile.first_name }}</a></li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

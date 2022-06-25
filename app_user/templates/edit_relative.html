@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Радактирование профиля</title>
+</head>
+<body>
+    <form method="post">
+        {% csrf_token %}
+        {{ relative_form.as_p }}
+        <button type="submit">Сохранить</button>
+        <a href="../../profile/{{ request.user.id }}">Назад</a>
+    </form>
+</body>
+</html>

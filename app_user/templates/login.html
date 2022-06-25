@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Вход</title>
+    <!--Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!--Bootstrap-->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
+
+    <link rel = "stylesheet" type = "text/css" href = "../../styles/login.css"/>
+</head>
+<body>
+    <section>
+        <form method="post">
+            <div class="container">
+                <h2>Вход</h2>
+                <div class="form">
+                    <div class="mb-3 name">
+                        <label class="form-label">Имя:</label>
+                        <input type="text" name="username" autofocus="" autocapitalize="none" autocomplete="username" maxlength="150" required="" id="id_username" class="form-control" placeholder="Введите имя" required>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Пароль:</label>
+                        <input type="password" name="password" autocomplete="current-password" required="" id="id_password" class="form-control" placeholder="Введите пароль">
+                    </div>
+                    <div class="button">
+                        <button type="submit" class="btn btn-dark login" id="btn">Войти</button>
+                        <br/>
+                        <a href="/register" class="form-label reg register">Зарегистрироваться</a>
+                    </div>
+                </div>
+
+                <img src="img/login1.png" alt="" class="login_img1">
+                <img src="img/login2.png" alt="" class="login_img2">
+
+                <div class="container-fluid"></div>
+            </div>
+        </form>
+    </section>
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <script type="text/javascript" src="../../scripts/login.js"></script>
+</body>
+</html>
