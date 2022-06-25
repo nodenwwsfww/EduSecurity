@@ -13,7 +13,4 @@ function validate() {
 	if(password.value == ""){
 		password.classList.add("is-invalid");
 	}
-	else{
-		request(login.value, password.value);
-	}
 }
