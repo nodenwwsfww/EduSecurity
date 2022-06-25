@@ -1,0 +1,142 @@
+body{
+	padding: 10px;
+	background: #F69400;
+	padding: 20px;
+	font-family: 'Montserrat', sans-serif;
+	overflow-x: hidden;
+	overflow-y: hidden;
+}
+
+a{
+	text-decoration: none;
+	color: white;
+}
+
+a:hover {
+	text-decoration: none;
+	color: white;
+}
+
+.form{
+	padding: 40px 20px 20px 20px;
+	margin: 60px auto;
+	background: #553570;
+	color: #fff;
+	border-radius: 45px;
+}
+
+.container{
+	margin: auto;
+	width: 600px;
+	margin-top: 30px;
+}
+
+input{
+	width: 50%;
+}
+
+.instruct{
+	text-decoration: underline;
+	cursor: pointer;
+	font-weight: bold;
+}
+
+.upload{
+	border-radius: 0;
+}
+
+.login_label{
+	background: #fff; 
+	width: 100%;
+}
+
+.container-fluid{
+	background: #553570;
+	height: 50px;
+	width: 100%;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+}
+
+h2{
+	position: absolute;
+	text-align: center;
+	background: #fff;
+	top:  100px;
+	width: 576px;
+	border-radius: 45px 45px 0px 0px;
+	padding: 20px 0 20px 0;
+}
+
+h1{
+	color: #fff;
+	position: relative;
+	top: 10px;
+	text-align: center;
+}
+
+.reg{
+	text-align: center;
+}
+
+img{
+	position: absolute;
+	bottom: 7%;
+	right: 5%;
+	width: 25%;
+}
+
+.button{
+	text-align: center;
+}
+
+.btn{
+	width: 90%;
+	margin-bottom: 10px;
+	font-size: 20px;
+	border-radius: 45px;
+}
+
+.mb-3{
+	width: 90%;
+	margin: auto;
+}
+
+::placeholder {
+	font-size: 13px;
+}
+
+.name{
+	margin-top: 30px;
+}
+
+@media screen and (max-width: 770px){
+	img, .container-fluid{
+		display: none;
+	}
+
+	h2{
+		width: 516px;
+	}
+}
+
+@media screen and (max-width: 580px){
+	.container{
+		width: 350px;
+	}
+
+	h2{
+		width: 326px;
+	}
+}
+
+@media screen and (max-width: 395px){
+	.container{
+		width: 330px;
+	}
+
+	h2{
+		width: 306px;
+	}
+}
