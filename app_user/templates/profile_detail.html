@@ -5,7 +5,7 @@
     <title>Бобразование</title>
 
     {% load static %}
-    <link href="img/logo_img.png" rel="shortcut icon" type="images/x-icon">
+    <link href="{% static 'img/login_img.png' %}" rel="shortcut icon" type="images/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!--Bootstrap-->
@@ -17,9 +17,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
-
-    <link rel = "stylesheet" type = "text/css" href = "styles/profile.css"/>
-    <link rel = "stylesheet" type = "text/css" href = "styles/menu.css"/>
+    <link rel = "stylesheet" type = "text/css" href = "{% static 'styles/profile.css' %}"/>
+    <link rel = "stylesheet" type = "text/css" href = "{% static 'styles/menu.css' %}"/>
     <title>{{ profile.first_name }} {{ profile.last_name }}</title>
 </head>
 <body>
