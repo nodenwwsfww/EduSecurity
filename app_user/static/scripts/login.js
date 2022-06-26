@@ -1,6 +1,6 @@
 let btn = document.getElementById('btn');
-let login = document.getElementById('login');
-let password = document.getElementById('password');
+let login = document.querySelector('.login');
+let password = document.querySelector('.password');
 
 btn.addEventListener('click', validate);
 
