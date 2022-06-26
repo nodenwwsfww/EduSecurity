@@ -6,8 +6,8 @@
 </head>
 <body>
     <ul>
-        {% for profile in profiles %}
-            <li><a href="../profile/{{ profile.id }}">{{ profile.last_name }} {{ profile.first_name }}</a></li>
+        {% for user in users %}
+            <li><a href="../profile/{{ user.id }}">{{ user }} {{ profile.first_name }}</a></li>
         {% endfor %}
     </ul>
 </body>

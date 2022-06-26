@@ -17,6 +17,7 @@ def register_view(request):
         form = RegisterForm(request.POST)
         if form.is_valid():
             user = form.save()
+            city = form.cleaned_data.get('city')
             # last_name = form.cleaned_data.get('last_name')
             # first_name = form.cleaned_data.get('first_name')
             # patronymic = form.cleaned_data.get('patronymic')
@@ -25,6 +26,7 @@ def register_view(request):
             # relative_type = form.cleaned_data.get('relative_type')
             Profile.objects.create(
                 user=user,
+                city=city,
                 # last_name=last_name,
                 # first_name=first_name,
                 # patronymic=patronymic,
@@ -65,7 +67,7 @@ class ProfilesListView(generic.ListView):
     """Функция для отображения списка пользователей"""
     model = User
     template_name = 'profiles_list.html'
-    context_object_name = 'profiles'
+    context_object_name = 'users'
     queryset = User.objects.all()
 
 
