@@ -4,6 +4,7 @@ from django.db import models
 
 class School(models.Model):
     """Описание модели школы"""
+
     region = models.CharField(max_length=100, verbose_name='Регион')
     district = models.CharField(max_length=100, verbose_name='Городской округ/Муниципальный район')
     city = models.CharField(max_length=100, verbose_name='Населённый пункт')
@@ -19,6 +20,7 @@ class School(models.Model):
 
 class Relative(models.Model):
     """Описание модели довереного лица"""
+
     main_parent = models.ForeignKey(User, default=1, on_delete=models.CASCADE, verbose_name='Главный родитель')
     last_name = models.CharField(max_length=25, verbose_name='Фамилия')
     first_name = models.CharField(max_length=25, verbose_name='Имя')
@@ -37,6 +39,7 @@ class Relative(models.Model):
 
 class Student(models.Model):
     """Описание модели ученика"""
+
     school = models.ForeignKey(School, on_delete=models.CASCADE, verbose_name='Школа')
     parent = models.ForeignKey(User, on_delete=models.CASCADE, verbose_name='Родитель')
     user_class = models.CharField(max_length=3, verbose_name='Класс')
@@ -55,6 +58,7 @@ class Student(models.Model):
 
 class Profile(models.Model):
     """Описание модели профиля главного пользователя (родителя)"""
+
     user = models.OneToOneField(User, on_delete=models.CASCADE, verbose_name='Пользователь')
     last_name = models.CharField(max_length=25, blank=True, verbose_name='Фамилия')
     first_name = models.CharField(max_length=25, blank=True, verbose_name='Имя')

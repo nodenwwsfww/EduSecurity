@@ -23,6 +23,7 @@ pip-wheel-metadata/
 share/python-wheels/
 *.egg-info/
 media/
+
 .installed.cfg
 *.egg
 MANIFEST
@@ -58,7 +59,8 @@ coverage.xml
 # Django stuff:
 *.log
 local_settings.py
-
+db.sqlite3
+db.sqlite3-journal
 
 # Flask stuff:
 instance/
