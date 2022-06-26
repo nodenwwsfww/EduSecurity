@@ -2,6 +2,7 @@ let btn = document.getElementById('btn');
 let login = document.getElementById('id_username');
 let phone = document.getElementById('id_phone_number');
 let mail = document.getElementById('id_email');
+let city = document.getElementById('city');
 let password = document.getElementById('id_password1');
 let repassword = document.getElementById('id_password2');
 
@@ -23,6 +24,9 @@ function validate() {
 	let reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
 	if(reg.test(mail.value) == false) {
 	    mail.classList.add("is-invalid");
+	}
+	if(city.value == ""){
+		city.classList.add("is-invalid");
 	}
 	if(password.value == ""){
 		password.classList.add("is-invalid");
