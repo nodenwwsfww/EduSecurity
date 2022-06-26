@@ -23,4 +23,4 @@ class StudentAdmin(admin.ModelAdmin):
 @admin.register(Profile)
 class ProfileAdmin(admin.ModelAdmin):
     """Регистрация модели профиля главного родителя в админке"""
-    list_display = ['user', 'last_name', 'first_name', 'patronymic', 'phone_number', 'email', 'relative_type']
+    list_display = ['id', 'user', 'last_name', 'first_name', 'patronymic', 'city', 'phone_number', 'email', 'relative_type']

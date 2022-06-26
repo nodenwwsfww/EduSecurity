@@ -17,20 +17,20 @@ def register_view(request):
         form = RegisterForm(request.POST)
         if form.is_valid():
             user = form.save()
-            last_name = form.cleaned_data.get('last_name')
-            first_name = form.cleaned_data.get('first_name')
-            patronymic = form.cleaned_data.get('patronymic')
+            # last_name = form.cleaned_data.get('last_name')
+            # first_name = form.cleaned_data.get('first_name')
+            # patronymic = form.cleaned_data.get('patronymic')
             phone_number = form.cleaned_data.get('phone_number')
             email = form.cleaned_data.get('email')
-            relative_type = form.cleaned_data.get('relative_type')
+            # relative_type = form.cleaned_data.get('relative_type')
             Profile.objects.create(
                 user=user,
-                last_name=last_name,
-                first_name=first_name,
-                patronymic=patronymic,
+                # last_name=last_name,
+                # first_name=first_name,
+                # patronymic=patronymic,
                 phone_number=phone_number,
                 email=email,
-                relative_type=relative_type
+                # relative_type=relative_type
             )
             username = form.cleaned_data.get('username')
             raw_password = form.cleaned_data.get('password1')
@@ -55,7 +55,10 @@ class AnotherLogout(LogoutView):
 def main_page(request):
     """Страница-прослойка для редиректа в settings.py"""
     user_id = request.user.id
-    return redirect(f'/profile/{user_id}')
+    if request.user.is_authenticated:
+        return redirect(f'/profile/{user_id}')
+    else:
+        return redirect(f'../login')
 
 
 class ProfilesListView(generic.ListView):
@@ -85,24 +88,25 @@ class ProfileDetailView(generic.DetailView):
 
 class ProfileEditFromView(View):
     """Функция описывающая логику редактирования профиля"""
-    def get(self, request, profile_id):
+    def get(self, request, user_id):
         if request.user.is_authenticated:
-            profile = User.objects.get(id=profile_id)
-            profile_form = UserCreationForm(instance=profile)
-            return render(request, 'edit_profile.html', context={'profile_form': profile_form,
-                                                                 'profile_id': profile_id})
+            user = User.objects.get(id=user_id)
+            profile = Profile.objects.get(id=user_id)
+            user_form = UserCreationForm(instance=user)
+            profile_form = RegisterForm(instance=profile)
+            return render(request, 'edit_profile.html', context={'user_form': user_form, 'user_id': user_id,
+                                                                 'profile_form': profile_form})
         else:
             raise PermissionError
 
-    def post(self, request, profile_id):
+    def post(self, request, user_id):
         if request.user.is_authenticated:
-            profile = User.objects.get(id=profile_id)
-            profile_form = UserCreationForm(request.POST, request.FILES)
-
-            if profile_form.is_valid():
-                profile.save()
-            return render(request, 'edit_profile.html', context={'profile_form': profile_form,
-                                                                 'profile_id': profile_id})
+            user = User.objects.get(id=user_id)
+            profile = Profile.objects.get(id=user_id)
+            user_form = UserCreationForm(instance=user)
+            profile_form = RegisterForm(instance=profile)
+            return render(request, 'edit_profile.html', context={'user_form': user_form, 'user_id': user_id,
+                                                                 'profile_form': profile_form})
         else:
             raise PermissionError
 
