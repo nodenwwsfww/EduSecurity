@@ -54,6 +54,14 @@ body{
 	font-size: 30px;
 }
 
+.status_true{
+	color: #5af08b;
+}
+
+.status_false{
+	color: #f05a5a;
+}
+
 @media screen and (max-width: 1000px){
 	.data_container{
 		height: 420px;
