@@ -120,7 +120,7 @@ img{
 }
 
 @media screen and (max-width: 600px){
-	.container-fluid, .login_img1{
+	.container-fluid, .login_img1, .login_img2{
 		display: none;
 	}
 
