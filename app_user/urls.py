@@ -1,9 +1,10 @@
 from django.urls import path
 from .views import AnotherLogin, AnotherLogout, register_view, ProfileDetailView, ProfileEditFromView, ProfilesListView, \
-    RelativeFormView, StudentFormView, StudentEditFormView, RelativeEditFormView, SchoolList
+    RelativeFormView, StudentFormView, StudentEditFormView, RelativeEditFormView, SchoolList, main_page
 
 urlpatterns = [
     path('login/', AnotherLogin.as_view(), name='login'),
+    path('', main_page, name='main_page'),
     path('register/', register_view, name='register'),
     path('logout/', AnotherLogout.as_view(), name='logout'),
     path('profiles/', ProfilesListView.as_view(), name='profiles_list'),
