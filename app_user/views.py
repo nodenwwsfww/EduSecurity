@@ -65,18 +65,18 @@ def main_page(request):
 
 class ProfilesListView(generic.ListView):
     """Функция для отображения списка пользователей"""
-    model = User
+    model = Profile
     template_name = 'profiles_list.html'
-    context_object_name = 'users'
-    queryset = User.objects.all()
+    context_object_name = 'profiles'
+    queryset = Profile.objects.all()
 
 
 class ProfileDetailView(generic.DetailView):
     """Функция для отображения детальной информации по пользователям"""
-    model = User
+    model = Profile
     template_name = 'profile_detail.html'
     context_object_name = 'profile'
-    queryset = User.objects.all()
+    queryset = Profile.objects.all()
 
     def get_context_data(self, **kwargs):
         """Передача дополнительных моделей в шаблон через контекст"""
