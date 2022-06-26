@@ -53,8 +53,56 @@
             <a href="../student/{{ student.id }}/edit">Редактировать профиль</a>
         </ul>
     {% endfor %}
+
+    <h1 class="logo">Бобразование</h1>
+
+    <div class="container">
+
+        <h1 class="pageName">Профиль</h1>
+
+        <div class="row data_container">
+            <div class="col-lg-6 col-md-12" id="first_block">
+                <img src="img/photo.png" class="photo">
+                <button type="button" class="btn btn-secondary" id="edit">Редактировать</button>
+            </div>
+
+            <div class="col-lg-6 col-sm-12 data" id="second_block">
+                <p>Фамилия Имя Отчество</p>
+                <a href="tel:89184898848"><ion-icon name="call-outline" class="icons"></ion-icon> 89184898848</a>
+                <br/>
+                <a href="mailto:example@gmail.com"><ion-icon name="at-outline" class="icons"></ion-icon> example@gmail.com</a>
+                <br/>
+                <button type="button" class="btn btn-purple" id="children">Дети</button>
+                <button type="button" class="btn btn-purple" id="parents">Доверенные</button>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="container menu">
+
+        <div class="col-4 menu_elem">
+            <a href="#" class="menu_element active">Профиль</a>
+            <a href="#" class="menu_element_img active"><ion-icon name="person-circle-outline"></ion-icon></a>
+        </div>
+
+        <div class="col-4 menu_elem">
+            <a href="#" class="menu_element">Панель</a>
+            <a href="#" class="menu_element_img"><ion-icon name="server-outline"></ion-icon></a>
+        </div>
+
+        <div class="col-4 menu_elem">
+            <a href="#" class="menu_element">История</a>
+            <a href="#" class="menu_element_img"><ion-icon name="list-outline"></ion-icon></a>
+        </div>
+
+    </div>
+
     <a href="../student/create">Регистрация ученика</a>
     <a href="/profile/{{ profile.id }}/edit">Редактировать профиль</a>
     <a href="../profiles">Назад</a>
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
 </html>
