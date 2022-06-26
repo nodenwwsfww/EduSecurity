@@ -61,7 +61,7 @@
         <div class="row data_container">
             <div class="col-lg-6 col-md-12" id="first_block">
                 <img src="{% static 'img/photo.png' %}" class="photo">
-                <button type="button" class="btn btn-secondary" id="edit">Редактировать</button>
+                <a href=""><button type="button" class="btn btn-secondary" id="edit">Редактировать</button></a>
             </div>
             <div class="col-lg-6 col-sm-12 data" id="second_block">
                 <p>{{ profile.first_name }} {{ profile.last_name }}</p>
@@ -76,8 +76,8 @@
                     </ion-icon> {{ profile.email }}
                 </a>
                 <br/>
-                <button type="button" class="btn btn-purple" id="children">Дети</button>
-                <button type="button" class="btn btn-purple" id="parents">Доверенные</button>
+                <a href=""><button type="button" class="btn btn-purple" id="children">Дети</button></a>
+                <a href=""><button type="button" class="btn btn-purple" id="parents">Доверенные</button></a>
             </div>
         </div>
 
