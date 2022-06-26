@@ -1,9 +1,9 @@
 let btn = document.getElementById('btn');
-let login = document.getElementById('login');
-let phone = document.getElementById('phone');
-let mail = document.getElementById('mail');
-let password = document.getElementById('password');
-let repassword = document.getElementById('repassword');
+let login = document.getElementById('id_username');
+let phone = document.getElementById('id_phone_number');
+let mail = document.getElementById('id_email');
+let password = document.getElementById('id_password1');
+let repassword = document.getElementById('id_password2');
 
 btn.addEventListener('click', validate);
 
