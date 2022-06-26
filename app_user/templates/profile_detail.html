@@ -63,13 +63,17 @@
                 <img src="img/photo.png" class="photo">
                 <button type="button" class="btn btn-secondary" id="edit">Редактировать</button>
             </div>
-            <p>{{ profile.first_name }} {{ profile.last_name }}</p>
-            <p>{{ profile.email }}</p>
             <div class="col-lg-6 col-sm-12 data" id="second_block">
-                <p>Фамилия Имя Отчество</p>
-                <a href="tel:89184898848"><ion-icon name="call-outline" class="icons"></ion-icon> 89184898848</a>
+                <p>{{ profile.first_name }} {{ profile.last_name }}</p>
+                <a href={{ profile.phone_number }}>
+                    <ion-icon name="call-outline" class="icons"></ion-icon> {{ profile.phone_number }}
+                </a>
                 <br/>
-                <a href="mailto:example@gmail.com"><ion-icon name="at-outline" class="icons"></ion-icon> example@gmail.com</a>
+                <a href={{ profile.email }}>
+                    <ion-icon name="at-outline" class="icons">
+
+                    </ion-icon> {{ profile.email }}
+                </a>
                 <br/>
                 <button type="button" class="btn btn-purple" id="children">Дети</button>
                 <button type="button" class="btn btn-purple" id="parents">Доверенные</button>
