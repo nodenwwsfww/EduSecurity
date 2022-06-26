@@ -32,6 +32,9 @@ function validate() {
 	if(password.value == ""){
 		password.classList.add("is-invalid");
 	}
+	if(password.length >= 8){
+		password.classList.add("is-invalid");
+	}
 	if(repassword.value == ""){
 		repassword.classList.add("is-invalid");
 	}
