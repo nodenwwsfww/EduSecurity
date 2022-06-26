@@ -60,17 +60,18 @@
 
         <div class="row data_container">
             <div class="col-lg-6 col-md-12" id="first_block">
-                <img src="img/photo.png" class="photo">
+                <img src="{% static 'img/photo.png' %}" class="photo">
                 <button type="button" class="btn btn-secondary" id="edit">Редактировать</button>
             </div>
             <div class="col-lg-6 col-sm-12 data" id="second_block">
                 <p>{{ profile.first_name }} {{ profile.last_name }}</p>
-                <a href={{ profile.phone_number }}>
-                    <ion-icon name="call-outline" class="icons"></ion-icon> {{ profile.phone_number }}
+                <a href="+79996052278">
+                    <ion-icon name="call-outline" class="icons"></ion-icon>
+                    +79996052278
                 </a>
                 <br/>
                 <a href={{ profile.email }}>
-                    <ion-icon name="at-outline" class="icons">
+                    <ion-icon name="at-outliпne" class="icons">
 
                     </ion-icon> {{ profile.email }}
                 </a>
@@ -80,7 +81,7 @@
             </div>
         </div>
 
-    </div>
+g    </div>
 
     <div class="container menu">
 
