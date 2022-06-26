@@ -56,9 +56,9 @@ class AnotherLogout(LogoutView):
 
 def main_page(request):
     """Страница-прослойка для редиректа в settings.py"""
-    user_id = request.user.id-1 # todo fix
+    user_id = request.user.idg # todo fix
     if request.user.is_authenticated:
-        return redirect(f'/profile/{user_id-1}')
+        return redirect(f'/profile/{user_id}')
     else:
         return redirect(f'../login')
 
