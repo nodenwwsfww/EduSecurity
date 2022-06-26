@@ -63,7 +63,7 @@
                 <a href="/profile/{{ profile.id }}/edit"><button type="button" class="btn btn-secondary" id="edit">Редактировать</button></a>
             </div>
             <div class="col-lg-6 col-sm-12 data" id="second_block">
-                <p>{{ profile.first_name }} {{ profile.last_name }}</p>
+                <p>{{ profile }} {{ profile.last_name }}</p>
                 <a href="">
                     <ion-icon name="call-outline" class="icons"></ion-icon>
                     {{ profile.phone_number }}
