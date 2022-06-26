@@ -16,8 +16,8 @@
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
 
+	    <link rel = "stylesheet" type = "text/css" href = "styles/edit.css"/>
 	    <link rel = "stylesheet" type = "text/css" href = "styles/menu.css"/>
-	    <link rel = "stylesheet" type = "text/css" href = "styles/profile_others.css"/>
 
 	</head>
 	<body>
@@ -26,25 +26,36 @@
 
 		<div class="container">
 			
-			<h1 class="pageName">Доверенные</h1>
+			<h1 class="pageName">Редактирование</h1>
 
 			<div class="row data_container">
 				<div class="col-lg-6 col-md-12" id="first_block">
 					<img src="img/photo.png" class="photo">
-					<button type="button" class="btn btn-secondary" id="edit">Редактировать</button>
+					<button type="button" class="btn btn-secondary" id="edit">Изменить</button>
 				</div>
 
 				<div class="col-lg-6 col-sm-12 data" id="second_block">
-					<p>Фамилия Имя</p>
-					<a href="tel:89184898848"><ion-icon name="call-outline" class="icons"></ion-icon> 89184898848</a>
-					<br/>
-					<a href="mailto:example@gmail.com"><ion-icon name="at-outline" class="icons"></ion-icon> example@gmail.com</a>
+					<div class="mb-3 name">
+				    	<input type="text" class="form-control" id="login" placeholder="Фамилия" required>
+				  	</div>
+				  	<div class="mb-3 name">
+				    	<input type="text" class="form-control" id="login" placeholder="Имя" required>
+				  	</div>
+					<div class="mb-3 name">
+				    	<input type="phone" class="form-control" id="login" placeholder="+79184898848" required>
+				  	</div>
+					<div class="mb-3 name">
+				    	<input type="mail" class="form-control" id="login" placeholder="example@mail.ru" required>
+				  	</div>
+				  	<div class="mb-3 name">
+				    	<input type="text" class="form-control" id="login" placeholder="МБОУ №4, 9В" required>
+				  	</div>
 				</div>
 			</div>
 
 			<div class="row">
 				<div class="col-12">
-					<button type="button" class="btn btn-purple add_button" id="children"><ion-icon name="add-circle-outline" class="icons"></ion-icon> Добавить</button>
+					<button type="button" class="btn btn-purple add_button" id="children">Сохранить</button>
 				</div>
 			</div>
 
