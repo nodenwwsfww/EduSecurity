@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang = "en" dir = "ltr">
+	<head>
+		<meta charset = "UTF-8">
+		<title>Боброзование</title>
+		<link href="img/logo_img.png" rel="shortcut icon" type="images/x-icon">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<!--Bootstrap-->
+	    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+	    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+	    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+	    <!--Bootstrap-->
+
+	    <link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
+
+	    <link rel = "stylesheet" type = "text/css" href = "styles/menu.css"/>
+	    <link rel = "stylesheet" type = "text/css" href = "styles/profile_others.css"/>
+
+	</head>
+	<body>
+
+		<h1 class="logo">Боброзование</h1>
+
+		<div class="container">
+			
+			<h1 class="pageName">Допуск</h1>
+
+			<div class="row data_container">
+				<div class="col-lg-6 col-md-12" id="first_block">
+					<img src="img/photo.png" class="photo">
+					<button type="button" class="btn btn-secondary" id="edit">Редактировать</button>
+				</div>
+
+				<div class="col-lg-6 col-sm-12 data" id="second_block">
+					<p>Фамилия Имя</p>
+					<a href="tel:89184898848"><ion-icon name="call-outline" class="icons"></ion-icon> 89184898848</a>
+					<br/>
+					<a href="mailto:example@gmail.com"><ion-icon name="at-outline" class="icons"></ion-icon> example@gmail.com</a>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-12">
+					<button type="button" class="btn btn-purple add_button" id="children"><ion-icon name="add-circle-outline" class="icons"></ion-icon> Добавить</button>
+				</div>
+			</div>
+
+		</div>
+
+		<div class="container menu">
+		  	
+		  	<div class="col-4 menu_elem">
+		  		<a href="#" class="menu_element active">Профиль</a>
+		  		<a href="#" class="menu_element_img active"><ion-icon name="person-circle-outline"></ion-icon></a>
+		  	</div>
+
+		  	<div class="col-4 menu_elem">
+		  		<a href="#" class="menu_element">Панель</a>
+		  		<a href="#" class="menu_element_img"><ion-icon name="server-outline"></ion-icon></a>
+		  	</div>
+
+		  	<div class="col-4 menu_elem">
+		  		<a href="#" class="menu_element">История</a>
+		  		<a href="#" class="menu_element_img"><ion-icon name="list-outline"></ion-icon></a>
+		  	</div>
+
+		</div>
+
+		<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+		<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+	</body>
+</html>
