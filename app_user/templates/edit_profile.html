@@ -26,6 +26,66 @@
         {{ profile_form.as_p }}
         <button type="submit">Сохранить</button>
         <a href="../{{ user_id }}">Назад</a>
+        <h1 class="logo">Бобразование</h1>
+
+        <div class="container">
+
+            <h1 class="pageName">Редактирование</h1>
+
+            <div class="row data_container">
+                <div class="col-lg-6 col-md-12" id="first_block">
+                    <img src="img/photo.png" class="photo">
+                    <button type="button" class="btn btn-secondary" id="edit">Изменить</button>
+                </div>
+
+                <div class="col-lg-6 col-sm-12 data" id="second_block">
+                    <div class="mb-3 name">
+                        <input type="text" class="form-control login" placeholder="Фамилия" required>
+                    </div>
+                    <div class="mb-3 name">
+                        <input type="text" class="form-control login" placeholder="Имя" required>
+                    </div>
+                    <div class="mb-3 name">
+                        <input type="text" class="form-control login" placeholder="Отчество" required>
+                    </div>
+                    <div class="mb-3 name">
+                        <input type="text" class="form-control login" placeholder="+79184898848" required>
+                    </div>
+                    <div class="mb-3 name">
+                        <input type="text" class="form-control login" placeholder="example@mail.ru" required>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <button type="button" class="btn btn-purple add_button" id="children">Сохранить</button>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="container menu">
+
+            <div class="col-4 menu_elem">
+                <a href="#" class="menu_element active">Профиль</a>
+                <a href="#" class="menu_element_img active"><ion-icon name="person-circle-outline"></ion-icon></a>
+            </div>
+
+            <div class="col-4 menu_elem">
+                <a href="#" class="menu_element">Панель</a>
+                <a href="#" class="menu_element_img"><ion-icon name="server-outline"></ion-icon></a>
+            </div>
+
+            <div class="col-4 menu_elem">
+                <a href="#" class="menu_element">История</a>
+                <a href="#" class="menu_element_img"><ion-icon name="list-outline"></ion-icon></a>
+            </div>
+
+        </div>
+
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     </form>
 </body>
 </html>
