@@ -14,7 +14,6 @@ body{
 	border-radius: 20px;
 	margin-top: 30px;
 	padding: 10px;
-	height: 300px;
 }
 
 .data{
@@ -35,16 +34,18 @@ body{
 	background: #553570;
 	color: white;
 	margin-top: 20px;
+	padding: 5px 20px 5px 20px;;
 }
 
 .btn-purple:hover{
 	color: white;
 }
 
+.icons{
+	vertical-align: middle;
+}
+
 @media screen and (max-width: 1000px){
-	.data_container{
-		height: 420px;
-	}
 	.photo{
 		width: 140px;
 	}
@@ -55,7 +56,7 @@ body{
 
 @media screen and (max-width: 500px){
 	.data{
-		font-size: 16px;
+		font-size: 15px;
 	}
 	.photo{
 		width: 120px;
