@@ -58,7 +58,7 @@ def main_page(request):
     """Страница-прослойка для редиректа в settings.py"""
     user_id = request.user.id-1 # todo fix
     if request.user.is_authenticated:
-        return redirect(f'/profile/{user_id}')
+        return redirect(f'/profile/{user_id-1}')
     else:
         return redirect(f'../login')
 
