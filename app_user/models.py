@@ -56,9 +56,10 @@ class Student(models.Model):
 class Profile(models.Model):
     """Описание модели профиля главного пользователя (родителя)"""
     user = models.OneToOneField(User, on_delete=models.CASCADE, verbose_name='Пользователь')
-    last_name = models.CharField(max_length=25, verbose_name='Фамилия')
-    first_name = models.CharField(max_length=25, verbose_name='Имя')
-    patronymic = models.CharField(max_length=25, verbose_name='Отчество')
+    last_name = models.CharField(max_length=25, blank=True, verbose_name='Фамилия')
+    first_name = models.CharField(max_length=25, blank=True, verbose_name='Имя')
+    city = models.CharField(max_length=50, default='Краснодар', verbose_name='Город (уч. заведения)')
+    patronymic = models.CharField(max_length=25, blank=True, verbose_name='Отчество')
     phone_number = models.CharField(max_length=11, verbose_name='Номер телефона')
     email = models.EmailField(verbose_name='Электронная почта')
     relative_type = models.CharField(max_length=15, blank=True, verbose_name='Степень родства')
