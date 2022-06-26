@@ -13,7 +13,8 @@ function validate() {
 	phone.classList.remove("is-invalid");
 	mail.classList.remove("is-invalid");
 	password.classList.remove("is-invalid");
-	// repassword.classList.remove("is-invalid");
+	repassword.classList.remove("is-invalid");
+	
 	if(login.value == ""){
 		login.classList.add("is-invalid");
 	}
