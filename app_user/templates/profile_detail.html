@@ -22,37 +22,35 @@
     <title>{{ profile.first_name }} {{ profile.last_name }}</title>
 </head>
 <body>
-    <p>{{ profile.first_name }} {{ profile.last_name }}</p>
-    <p>{{ profile.email }}</p>
-    <p>Список школ:</p>
-    {% for school in schools %}
-        <p>{{ school.region }}, {{ school.district }}, {{ school.city }}, {{ school.school }}</p>
-    {% endfor %}
-    <p>Список доверенных лиц:</p>
-    {% for relative in relatives %}
-        <ul>
-            <li>{{ relative.last_name }}</li>
-            <li>{{ relative.first_name }}</li>
-            <li>{{ relative.patronymic }}</li>
-            <li>{{ relative.phone_number }}</li>
-            <li>{{ relative.email }}</li>
-            <li>{{ relative.relative_type }}</li>
-            <li><a href="../relative/{{ relative.id }}/edit">Редактировать профиль</a></li>
-        </ul>
-    {% endfor %}
-    <a href="../relative/create">Создать доверенное лицо</a>
-    <p>Список учеников:</p>
-    {% for student in students %}
-        <ul>
-            <li>{{ student.last_name }}</li>
-            <li>{{ student.first_name }}</li>
-            <li>{{ student.patronymic }}</li>
-            <li>{{ student.phone_number }}</li>
-            <li>{{ student.user_class }}</li>
-            <li>{{ student.school }}</li>
-            <a href="../student/{{ student.id }}/edit">Редактировать профиль</a>
-        </ul>
-    {% endfor %}
+<!--    <p>Список школ:</p>-->
+<!--    {% for school in schools %}-->
+<!--        <p>{{ school.region }}, {{ school.district }}, {{ school.city }}, {{ school.school }}</p>-->
+<!--    {% endfor %}-->
+<!--    <p>Список доверенных лиц:</p>-->
+<!--    {% for relative in relatives %}-->
+<!--        <ul>-->
+<!--            <li>{{ relative.last_name }}</li>-->
+<!--            <li>{{ relative.first_name }}</li>-->
+<!--            <li>{{ relative.patronymic }}</li>-->
+<!--            <li>{{ relative.phone_number }}</li>-->
+<!--            <li>{{ relative.email }}</li>-->
+<!--            <li>{{ relative.relative_type }}</li>-->
+<!--            <li><a href="../relative/{{ relative.id }}/edit">Редактировать профиль</a></li>-->
+<!--        </ul>-->
+<!--    {% endfor %}-->
+<!--    <a href="../relative/create">Создать доверенное лицо</a>-->
+<!--    <p>Список учеников:</p>-->
+<!--    {% for student in students %}-->
+<!--        <ul>-->
+<!--            <li>{{ student.last_name }}</li>-->
+<!--            <li>{{ student.first_name }}</li>-->
+<!--            <li>{{ student.patronymic }}</li>-->
+<!--            <li>{{ student.phone_number }}</li>-->
+<!--            <li>{{ student.user_class }}</li>-->
+<!--            <li>{{ student.school }}</li>-->
+<!--            <a href="../student/{{ student.id }}/edit">Редактировать профиль</a>-->
+<!--        </ul>-->
+<!--    {% endfor %}-->
 
     <h1 class="logo">Бобразование</h1>
 
@@ -65,7 +63,8 @@
                 <img src="img/photo.png" class="photo">
                 <button type="button" class="btn btn-secondary" id="edit">Редактировать</button>
             </div>
-
+            <p>{{ profile.first_name }} {{ profile.last_name }}</p>
+            <p>{{ profile.email }}</p>
             <div class="col-lg-6 col-sm-12 data" id="second_block">
                 <p>Фамилия Имя Отчество</p>
                 <a href="tel:89184898848"><ion-icon name="call-outline" class="icons"></ion-icon> 89184898848</a>
@@ -82,13 +81,13 @@
     <div class="container menu">
 
         <div class="col-4 menu_elem">
-            <a href="#" class="menu_element active">Профиль</a>
-            <a href="#" class="menu_element_img active"><ion-icon name="person-circle-outline"></ion-icon></a>
+            <a href="../profiles" class="menu_element active">Профиль</a>
+            <a href="../profiles" class="menu_element_img active"><ion-icon name="person-circle-outline"></ion-icon></a>
         </div>
 
         <div class="col-4 menu_elem">
-            <a href="#" class="menu_element">Панель</a>
-            <a href="#" class="menu_element_img"><ion-icon name="server-outline"></ion-icon></a>
+            <a href="../admin" class="menu_element">Панель</a>
+            <a href="../admin" class="menu_element_img"><ion-icon name="server-outline"></ion-icon></a>
         </div>
 
         <div class="col-4 menu_elem">
@@ -98,9 +97,9 @@
 
     </div>
 
-    <a href="../student/create">Регистрация ученика</a>
-    <a href="/profile/{{ profile.id }}/edit">Редактировать профиль</a>
-    <a href="../profiles">Назад</a>
+<!--    <a href="../student/create">Регистрация ученика</a>-->
+<!--    <a href="/profile/{{ profile.id }}/edit">Редактировать профиль</a>-->
+<!--    <a href="../profiles">Назад</a>-->
 
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
