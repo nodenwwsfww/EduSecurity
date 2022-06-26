@@ -23,9 +23,6 @@
 <body>
     <form method="post">
         {% csrf_token %}
-        {{ profile_form.as_p }}
-        <button type="submit">Сохранить</button>
-        <a href="../{{ user_id }}">Назад</a>
         <h1 class="logo">Бобразование</h1>
 
         <div class="container">
@@ -34,7 +31,7 @@
 
             <div class="row data_container">
                 <div class="col-lg-6 col-md-12" id="first_block">
-                    <img src="img/photo.png" class="photo">
+                    <img src="{% static 'img/photo.png' %}" class="photo">
                     <button type="button" class="btn btn-secondary" id="edit">Изменить</button>
                 </div>
 
@@ -68,13 +65,13 @@
         <div class="container menu">
 
             <div class="col-4 menu_elem">
-                <a href="#" class="menu_element active">Профиль</a>
-                <a href="#" class="menu_element_img active"><ion-icon name="person-circle-outline"></ion-icon></a>
+                <a href="../{{ user_id }}" class="menu_element active">Профиль</a>
+                <a href="../{{ user_id }}" class="menu_element_img active"><ion-icon name="person-circle-outline"></ion-icon></a>
             </div>
 
             <div class="col-4 menu_elem">
-                <a href="#" class="menu_element">Панель</a>
-                <a href="#" class="menu_element_img"><ion-icon name="server-outline"></ion-icon></a>
+                <a href="../admin" class="menu_element">Панель</a>
+                <a href="../admin" class="menu_element_img"><ion-icon name="server-outline"></ion-icon></a>
             </div>
 
             <div class="col-4 menu_elem">
