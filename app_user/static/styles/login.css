@@ -124,12 +124,12 @@ img{
 		display: none;
 	}
 
-	.login_img2{
+/* 	.login_img2{
 		left: 10%;
 		margin: auto;
 		width: 30%;
 		bottom: 3%	
-	}
+	} */
 }
 
 @media screen and (max-width: 390px){
